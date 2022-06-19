@@ -1,0 +1,32 @@
+{
+  "name": "mentormesenpai",
+  "version": "1.0.0",
+  "description": "Mentor me Senpai is a site to share interview experiences.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brainybit/MentorMeSenpai-"
+  },
+  "keywords": [
+    "review",
+    "interview",
+    "share",
+    "interview",
+    "company",
+    "interview"
+  ],
+  "author": "Ritik Maheshwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brainybit/MentorMeSenpai-"
+  },
+  
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}

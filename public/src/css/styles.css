@@ -1,0 +1,37 @@
+form.required .control-label:after {
+    content:"*";
+    color:red;
+}
+
+.modal-lg {
+    max-width: 70%;
+}
+
+.modal-header{
+    background:   #f39c12   ;
+    color: #fff;
+}
+
+.alert-modal{
+    background: #52be80;
+    color: #fff;
+}
+.logo-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+.navbar-custom {
+    background-color: #85dcb8;
+    height: 70px;
+    padding: 17px;
+}
+.navbar-brand
+{
+    color: #cd6245;
+    font-family: 'FluffleMuffleHand', sans-serif;
+       font-size: 40px;
+       
+}

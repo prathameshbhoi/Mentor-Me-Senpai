@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mentor Me senpai - Share Interview Experience</title>
+    <link
+      href="http://fonts.cdnfonts.com/css/flufflemufflehand"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/f4ee2627c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-custom">
+      <div class="container d-flex justify-content-between">
+        <div class="logo-image">
+          <img src="src/img/logo.png" class="img-fluid" />
+        </div>
+        <a href="#" class="navbar-brand">Mentor Me Senpai</a>
+        <a href="#"><i class="fa-light fa-newspaper"></i></a>
+      </div>
+    </nav>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Mentor Me Senpai!</h1>
+        <p class="lead text-muted">
+          Interview experiences and tips for Technical and HR interview round.
+          This will help you for your interview preparation.
+        </p>
+        <p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#submit-review-modal"
+          >
+            Share your experience
+          </button>
+        </p>
+      </div>
+    </section>
+    <div class="text-muted">
+      <div class="container">
+        <div class="row align-items-start" id="reviewcard">
+         
+        <div
+          class="modal fade"
+          id="submit-review-modal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" name="exampleModalLabel">
+                  Write Review
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="required" id="submitReviewForm">
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="control-label"
+                            >Company Name you interviewed for?</label
+                          >
+                          <input
+                            class="form-control"
+                            name="companyName"
+                            placeholder="Enter Company Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="control-label"
+                            >Job Title/Designation you interviewed for?</label
+                          >
+                          <input
+                            class="form-control"
+                            name="jobTitle"
+                            placeholder="Job Title"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="control-label">
+                            Work Experience at the time of interview?</label
+                          >
+                          <select
+                            class="form-control"
+                            name="workExperience"
+                            required
+                          >
+                            <option>Years of experience</option>
+                            <option value="0">Fresher</option>
+                            <option value="0-1">0-1 years</option>
+                            <option value="1-2">1-2 years</option>
+                            <option value="2-3">2-3 years</option>
+                            <option value="3-4">3-4 years</option>
+                            <option value="4-5">4-5 years</option>
+                            <option value="5-6">5-6 years</option>
+                            <option value="6-7">6-7 years</option>
+                            <option value="7-8">7-8 years</option>
+                            <option value="8-9">8-9 years</option>
+                            <option value="9-10">9-10 years</option>
+                            <option value="10+">10+ years</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="control-label">
+                            What is the highest qualification at the time of
+                            interview?</label
+                          >
+                          <select
+                            class="form-control"
+                            id="exampleSelect1"
+                            required
+                          >
+                            <option>Select</option>
+                            <option value="Not Pursuing Graduation">
+                              Not Pursuing Graduation
+                            </option>
+                            <option value="MCA">MCA</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="BCA">BCA</option>
+                            <option value="B.Com">B.Com</option>
+                            <option value="B.Ed">B.Ed</option>
+                            <option value="BDS">BDS</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <label class="control-label">
+                      Would you like to keep post anonymous?</label
+                    >
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="postAnonymous"
+                          value="YES"
+                          required
+                        />
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input
+                          class="form-check-input"
+                          name="postAnonymous"
+                          value="NO"
+                          checked=""
+                          type="radio"
+                        />
+                        No
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="control-label">
+                            When did you appear for the process?</label
+                          >
+                          <div class="row">
+                            <div class="col">
+                              <select
+                                class="form-control"
+                                name="month"
+                                required
+                              >
+                                <option value="0" selected="">
+                                  Select Month
+                                </option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                              </select>
+                            </div>
+                            <div class="col">
+                              <select class="form-control" name="year">
+                                <option value="2022" selected="">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="control-label">
+                            How did you get the interview?</label
+                          >
+                          <select
+                            class="form-control"
+                            name="interviewSource"
+                            required
+                          >
+                            <option>Select Source</option>
+                            <option value="Campus Placement">
+                              Campus Placement
+                            </option>
+                            <option value="Consultancy">Consultancy</option>
+                            <option value="Company Website">
+                              Company Website
+                            </option>
+                            <option value="Referral">Referral</option>
+                            <option value="Job Portal">Job Portal</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <div class="form-group">
+                      <label class="control-label">
+                        Describe the process of interview?</label
+                      >
+                      <textarea
+                        class="form-control"
+                        name="interviewDescription"
+                        required
+                        rows="3"
+                        placeholder="e.g : no. of rounds,shortlisting Criteria, written test, skype/face to face interview, GD experiece etc"
+                      ></textarea>
+                    </div>
+
+                    <div class="form-group" id="questions">
+                      <label class="control-label">
+                        Question asked in the interview?</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon1"
+                          >Qu.</span
+                        >
+                        <input
+                          class="form-control"
+                          name="questions"
+                          placeholder="Work Experience"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button
+                        type="button"
+                        class="btn btn-info"
+                        id="addQuestion"
+                      >
+                        Add more questions
+                      </button>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <label class="control-label"
+                          >How did you find the interview?</label
+                        ><br />
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="difficultyLevel"
+                              value="Easy"
+                              checked
+                              required
+                            />
+                            Easy
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="difficultyLevel"
+                              value="Difficult"
+                            />
+                            Difficult
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="difficultyLevel"
+                              value="Very Difficult"
+                            />
+                            Very Difficult
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <label class="control-label"
+                          >Did you get the offer?</label
+                        ><br />
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="offered"
+                              value="Yes"
+                              required
+                            />
+                            Yes
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="offered"
+                              value="No"
+                            />
+                            No
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="offered"
+                              value="Awaiting"
+                            />
+                            Awaiting
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <br /><label
+                        >Anything else you want to mention about the
+                        interview?</label
+                      >
+                      <textarea
+                        class="form-control"
+                        name="moreDetails"
+                        rows="3"
+                        placeholder="e.g: Any specific Prepration required for similar job process,Duration Of process"
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="subitReview"
+                      >
+                        Submit Review
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="successReviewSubmit"
+          tabindex="-1"
+          role="dialog"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-body alert-success">
+                <h5 class="alert-heading" id="exampleModalLabel">
+                  <strong>Review Submitted!</strong>
+                </h5>
+                Thanks you for sharing your experience.We appreciate your
+                contributation.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="viewDetailModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" name="exampleModalLabel">
+                  Job Details
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="view-modal-body">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-muted">
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+      integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function () {
+        var question = `
+                                        <br><div class="input-group">
+                                            <span class="input-group-addon" id="sizing-addon1">Qu.</span>
+                                            <input class="form-control" name="questions" placeholder="Work Experience" required>
+                                        </div>`;
+
+        $("#addQuestion").on("click", function () {
+          $(question).appendTo("#questions");
+        });
+
+        $("#subitReview").on("click", function () {
+          $.ajax({
+            url: "/review",
+            type: "POST",
+            dataType: "json",
+            data: $("#submitReviewForm").serialize(),
+            complete: function (result) {
+              $("#submit-review-modal").modal("hide");
+              document.getElementById("submitReviewForm").reset();
+              $("#successReviewSubmit").modal("show");
+              setTimeout(function () {
+                $("#successReviewSubmit").modal("hide");
+              }, 2000);
+            },
+          });
+        });
+
+        $.getJSON("/review", function (data) {
+          //Data on load
+          console.log(data);
+          data.forEach(element => {
+            // print each post
+            console.log(element);
+            $("#reviewcard").prepend(`<div class="col col-lg-3 my-3">
+            <div class="card text-center">
+              <div class="card-block">
+                <h3 class="card-title">${element.companyName}</h3>
+                <p class="card-text">
+                  ${element.jobTitle}
+                </p>
+                <button
+                  type="button"
+                  id="view-${element._id}"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#viewDetailModal"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>`)
+          $(`#view-${element._id}`).on("click", function() {
+            console.log(`${element._id}-button`);
+            // $("#viewDetailModal").modal("hide");
+            $("#view-modal-body").html(`
+            <h1>${element.companyName}</h1>
+            <hr>
+            <div>${element.interviewDescription}</div>
+            <br> 
+            <p>${element.moreDetails}</p>
+
+            `);
+            $("#viewDetailModal").modal("show");
+            });
+          });
+        });
+      })
+    </script>
+  </body>
+</html>
