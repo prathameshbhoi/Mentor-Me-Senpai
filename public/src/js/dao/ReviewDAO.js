@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 var url = "mongodb://localhost:27017/prep2crack";
-
+//var url = "mongodb://localhost:27017/mentormesenpai";
 MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     db.createCollection("interviewReviews", function (err, res) {

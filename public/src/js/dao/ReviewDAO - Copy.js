@@ -4,6 +4,7 @@ var router = express.Router();
 
 var url = "mongodb://localhost:27017/prep2crack";
 
+
 MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     db.createCollection("interviewReviews", function (err, res) {
