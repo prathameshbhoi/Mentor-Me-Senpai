@@ -1,7 +1,7 @@
 # mentor_Me_Senpai
 
 Mentor me Senpai is a website to share interview experiences which will be taken as input through a form and stored in the database.
-Share bugs if you find any @ritikm099@gmail.com
+
 
 # Setup -
 
